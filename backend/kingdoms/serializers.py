@@ -3,7 +3,6 @@ from .models import Kingdom
 
 
 class KingdomSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Kingdom
-        fields = "__all__"
+        fields = ["id", "name"]

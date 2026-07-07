@@ -3,7 +3,6 @@ from .models import Faction
 
 
 class FactionSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Faction
-        fields = "__all__"
+        fields = ["id", "name"]

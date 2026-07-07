@@ -1,12 +1,37 @@
 import "./EntityCard.css";
 
+const TYPE_COLORS = {
+    Flama: "#ff5b2e",
+    Aqua: "#38bdf8",
+    Terrae: "#57b26d",
+    Eol: "#7dd3fc",
+    Crelix: "#bde7ff",
+    Fulmen: "#ffd54a",
+    Lux: "#ffffff",
+    Umbra: "#0b132b",
+    Vita: "#ff4d5d",
+    Toxi: "#71ff63",
+    Vis: "#d8b35f",
+    Inzurvitus: "#4b1d78",
+};
+
 function EntityCard({ character }) {
+
+    const runeColor =
+        TYPE_COLORS[character.character_type] || "#999999";
 
     return (
 
-        <article className="entity-card">
+        <article
+            className="entity-card"
+            style={{
+                "--rune-color": runeColor,
+            }}
+        >
 
             <div className="entity-image">
+
+                <div className="entity-aura"></div>
 
                 {character.image ? (
 
@@ -23,27 +48,52 @@ function EntityCard({ character }) {
 
                 )}
 
+                <div className="entity-gradient"></div>
+
             </div>
 
             <div className="entity-content">
 
                 <h2>{character.name}</h2>
 
-                <h3>{character.title}</h3>
+                <h4>{character.title}</h4>
+
+                <div className="entity-divider"></div>
 
                 <div className="entity-info">
 
-                    <span><strong>Raça:</strong> {character.race}</span>
+                    <p>
+                        <strong>Tipagem</strong>
+                        <span>{character.character_type}</span>
+                    </p>
 
-                    <span><strong>Reino:</strong> {character.kingdom}</span>
+                    <p>
+                        <strong>Raça</strong>
+                        <span>{character.race?.name}</span>
+                    </p>
 
-                    <span><strong>Facção:</strong> {character.faction}</span>
+                    <p>
+                        <strong>Reino</strong>
+                        <span>{character.kingdom?.name}</span>
+                    </p>
 
-                    <span><strong>Arma:</strong> {character.weapon}</span>
+                    <p>
+                        <strong>Facção</strong>
+                        <span>{character.faction?.name}</span>
+                    </p>
 
-                    <span><strong>Tipagem:</strong> {character.character_type}</span>
+                    <p>
+                        <strong>Arma</strong>
+                        <span>{character.weapon?.name}</span>
+                    </p>
 
                 </div>
+
+                <button className="details-button">
+
+                    Ver Personagem →
+
+                </button>
 
             </div>
 

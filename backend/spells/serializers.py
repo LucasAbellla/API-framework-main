@@ -3,7 +3,6 @@ from .models import Spell
 
 
 class SpellSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Spell
-        fields = "__all__"
+        fields = ["id", "name"]

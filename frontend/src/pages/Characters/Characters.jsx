@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import api from "../../services/api";
 
+import Hero from "../../components/Hero/Hero.jsx";
 import EntityCard from "../../components/EntityCard/EntityCard";
 
 import "./Characters.css";

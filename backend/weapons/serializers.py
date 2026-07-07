@@ -3,7 +3,6 @@ from .models import Weapon
 
 
 class WeaponSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Weapon
-        fields = "__all__"
+        fields = ["id", "name"]
