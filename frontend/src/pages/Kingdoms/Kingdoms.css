@@ -1,0 +1,17 @@
+.characters-grid{
+
+    width:min(1500px,92%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fill,minmax(340px,1fr));
+
+    gap:35px;
+
+    padding:40px 0 80px;
+
+}

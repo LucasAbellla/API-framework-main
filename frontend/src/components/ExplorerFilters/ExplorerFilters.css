@@ -1,0 +1,39 @@
+.explorer-filters{
+
+    width:min(1500px,92%);
+
+    margin:30px auto 45px;
+
+    padding:28px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:24px;
+
+    background:rgba(10,10,15,.65);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:8px;
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,.45);
+
+}
+
+@media(max-width:900px){
+
+    .explorer-filters{
+
+        justify-content:flex-start;
+
+    }
+
+}

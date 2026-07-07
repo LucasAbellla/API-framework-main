@@ -1,0 +1,59 @@
+.select-filter{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.select-filter label{
+
+    font-family:"Cinzel",serif;
+
+    color:#9ca3af;
+
+    font-size:.75rem;
+
+    letter-spacing:2px;
+
+}
+
+.select-filter select{
+
+    width:180px;
+
+    padding:12px 14px;
+
+    background:#13161d;
+
+    color:white;
+
+    border:1px solid #2a3040;
+
+    border-radius:4px;
+
+    outline:none;
+
+    transition:.25s;
+
+    font-size:.9rem;
+
+}
+
+.select-filter select:hover{
+
+    border-color:#d8b35f;
+
+}
+
+.select-filter select:focus{
+
+    border-color:#d8b35f;
+
+    box-shadow:
+
+        0 0 15px rgba(216,179,95,.2);
+
+}

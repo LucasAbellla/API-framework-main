@@ -1,28 +1,37 @@
+import { Link } from "react-router-dom";
+
+import SearchBar from "../SearchBar/SearchBar";
+
 import "./Navbar.css";
 
-function Navbar(){
+function Navbar() {
 
-    return(
+    return (
 
         <header className="navbar">
 
             <div className="navbar-container">
 
-                <h2>ECLIPTARI</h2>
+                <Link
+                    to="/"
+                    className="navbar-logo"
+                >
+                    ECLIPTARI
+                </Link>
+
+                <SearchBar />
 
                 <nav>
 
-                    <a href="#">Personagens</a>
+                    <Link to="/">Personagens</Link>
 
-                    <a href="#">Reinos</a>
+                    <Link to="/Kingdoms">Reinos</Link>
 
-                    <a href="#">Facções</a>
+                    <Link to="/Races">Raças</Link>
 
-                    <a href="#">Raças</a>
+                    <Link to="/Factions">Facções</Link>
 
-                    <a href="#">Armas</a>
-
-                    <a href="#">Magias</a>
+                    <Link to="/Types">Tipagem</Link>
 
                 </nav>
 

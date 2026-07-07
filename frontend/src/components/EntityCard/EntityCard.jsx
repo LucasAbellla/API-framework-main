@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import "./EntityCard.css";
 
 const TYPE_COLORS = {
@@ -17,6 +19,8 @@ const TYPE_COLORS = {
 
 function EntityCard({ character }) {
 
+    const navigate = useNavigate();
+
     const runeColor =
         TYPE_COLORS[character.character_type] || "#999999";
 
@@ -25,13 +29,11 @@ function EntityCard({ character }) {
         <article
             className="entity-card"
             style={{
-                "--rune-color": runeColor,
+                "--rune-color": runeColor
             }}
         >
 
             <div className="entity-image">
-
-                <div className="entity-aura"></div>
 
                 {character.image ? (
 
@@ -43,10 +45,14 @@ function EntityCard({ character }) {
                 ) : (
 
                     <div className="image-placeholder">
+
                         Sem imagem
+
                     </div>
 
                 )}
+
+                <div className="entity-aura"></div>
 
                 <div className="entity-gradient"></div>
 
@@ -58,40 +64,56 @@ function EntityCard({ character }) {
 
                 <h4>{character.title}</h4>
 
-                <div className="entity-divider"></div>
-
                 <div className="entity-info">
 
                     <p>
+
                         <strong>Tipagem</strong>
+
                         <span>{character.character_type}</span>
+
                     </p>
 
                     <p>
+
                         <strong>Raça</strong>
+
                         <span>{character.race?.name}</span>
+
                     </p>
 
                     <p>
+
                         <strong>Reino</strong>
+
                         <span>{character.kingdom?.name}</span>
+
                     </p>
 
                     <p>
+
                         <strong>Facção</strong>
+
                         <span>{character.faction?.name}</span>
+
                     </p>
 
                     <p>
+
                         <strong>Arma</strong>
+
                         <span>{character.weapon?.name}</span>
+
                     </p>
 
                 </div>
 
-                <button className="details-button">
+                <button
+                    className="details-button"
+                    onClick={() => navigate(`/characters/${character.id}`)}
+                >
 
-                    Ver Personagem →
+                    Ver Compêndio →
 
                 </button>
 
