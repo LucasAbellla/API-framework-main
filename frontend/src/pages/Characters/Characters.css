@@ -1,0 +1,11 @@
+.characters-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}

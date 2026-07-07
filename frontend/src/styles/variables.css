@@ -1,0 +1,19 @@
+:root{
+
+    --bg:#050508;
+    --bg-secondary:#101218;
+    --card:#161a22;
+
+    --border:#2a3040;
+
+    --text:#f1f5f9;
+    --text-light:#cbd5e1;
+    --text-dark:#94a3b8;
+
+    --hover:#232833;
+
+    --radius:8px;
+
+    --transition:.25s;
+
+}

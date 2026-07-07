@@ -1,0 +1,61 @@
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(5,5,8,.65);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.navbar-container{
+
+    width:min(1400px,92%);
+
+    margin:auto;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.navbar h2{
+
+    color:var(--primary);
+
+    letter-spacing:4px;
+
+}
+
+.navbar nav{
+
+    display:flex;
+
+    gap:28px;
+
+}
+
+.navbar a{
+
+    color:var(--text-muted);
+
+    transition:.25s;
+
+}
+
+.navbar a:hover{
+
+    color:white;
+
+}
