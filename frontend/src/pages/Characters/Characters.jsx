@@ -5,12 +5,14 @@ import api from "../../services/api";
 import Navbar from "../../components/Navbar/Navbar";
 import ExplorerFilters from "../../components/ExplorerFilters/ExplorerFilters";
 import EntityCard from "../../components/EntityCard/EntityCard";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 import "./Characters.css";
 
 function Characters() {
 
     const [characters, setCharacters] = useState([]);
+    const [search, setSearch] = useState("");
 
     const [races, setRaces] = useState([]);
     const [kingdoms, setKingdoms] = useState([]);
@@ -58,24 +60,39 @@ function Characters() {
     const filteredCharacters = characters.filter(character => {
 
         if (
+            search &&
+            !character.name.toLowerCase().includes(search.toLowerCase())
+        ) {
+            return false;
+        }
+
+        if (
             selectedType &&
             character.character_type !== selectedType
-        ) return false;
+        ) {
+            return false;
+        }
 
         if (
             selectedRace &&
             character.race?.id !== Number(selectedRace)
-        ) return false;
+        ) {
+            return false;
+        }
 
         if (
             selectedKingdom &&
             character.kingdom?.id !== Number(selectedKingdom)
-        ) return false;
+        ) {
+            return false;
+        }
 
         if (
             selectedFaction &&
             character.faction?.id !== Number(selectedFaction)
-        ) return false;
+        ) {
+            return false;
+        }
 
         return true;
 
@@ -111,6 +128,14 @@ function Characters() {
 
                 selectedFaction={selectedFaction}
                 setSelectedFaction={setSelectedFaction}
+
+            />
+
+            <SearchBar
+
+                value={search}
+                onChange={setSearch}
+                placeholder="Pesquisar personagens..."
 
             />
 

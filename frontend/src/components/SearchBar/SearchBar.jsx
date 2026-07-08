@@ -1,6 +1,10 @@
 import "./SearchBar.css";
 
-function SearchBar() {
+function SearchBar({
+    value,
+    onChange,
+    placeholder = "Pesquisar personagens..."
+}) {
 
     return (
 
@@ -8,7 +12,9 @@ function SearchBar() {
 
             <input
                 type="text"
-                placeholder="Pesquisar entidades..."
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+                placeholder={placeholder}
             />
 
         </div>
