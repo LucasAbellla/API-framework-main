@@ -1,0 +1,23 @@
+back 
+python -m venv venv      
+venv\Scripts\activate  
+python manage.py runserver 
+
+http://127.0.0.1:8000/admin/
+
+
+http://127.0.0.1:8000/api/factions/
+
+
+
+front
+npm install
+npm run dev
+
+node -v
+npm -v
+python --version
+pip --version
+
+
+http://localhost:5173/
